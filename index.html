@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="icon/x-icon" href="1328226.png">
+</head>
+<body class="bg-info" style="background: url(1328226.png)">
+    <script src="script.js"></script>
+    <div class="d-flex justify-content-center align-item-center" style="height: 1000px;" >
+        <div class="bg-white justify-content-center align-item-center border border-primary container m-5 col-6 col-sm-6 m-sm-5 rounded">
+            <div class="p-3 d-flex justify-content-center align-item-center">
+                <label class="d-flex justify-content-center align-item-center fw-4 fs-4 text-white ms-3 bg-primary p-2 rounded" for="names">SUBJECT:</label>
+                <input class="col-7 fw-bold ms-3 p-2 rounded" placeholder="Add Subject Here" type="text" id="names">
+                <button class="scalehover d-flex justify-content-center align-item-center fw-4 fs-4 text-white ms-3 bg-dark p-2 rounded" id="addsub">ADD</button>
+            </div>
+            <form id="grades">      
+                <div>
+                    <div class="p-3 d-flex justify-content-center align-item-center">
+                        
+                        <div class="fs-4 d-flex justify-content-center align-item-center bg-primary rounded p-1 ms-4 col-4 text-white">
+                            <div >
+                                <label class="fw-bold" for="subj">SUBJECT</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-item-center fs-4 fw-bold bg-primary rounded p-1 ms-3 col-4 text-white">
+                            <div >
+                                <label for="grads">GRADE</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-item-center p-3">
+                        <select class="rounded ms-4 fw-bold col-4" style="text-align: center;" id="subj">
+                            
+                        </select>
+                        <input type="number" class="rounded ms-4 col-4 fw-bold" style="text-align: center;" placeholder="Enter" id="gra">
+                        
+                        <button class="scalehover text-white ms-3 d-flex justify-content-center align-item-center bg-dark rounded fw-bold">ENTER</button><br>
+                    </div>
+                   
+                </div>  
+            </form>
+            
+
+            <div class="d-flex justify-content-center align-item-center">
+                <button class="scalehover text-white ms-3 d-flex justify-content-center align-item-center bg-dark rounded fw-bold" id="clr">Restore Default</button><br>
+            </div>
+            <div class="col-12">
+                <div class="d-flex justify-content-center align-item-center p-3">
+                    <label class="d-flex justify-content-center align-item-center bg-primary fw-bold p-2 fs-4 rounded col-6 text-white">RESULTS</label>
+                </div>
+                <div class="d-flex justify-content-center align-item-center mb-3">
+                    <button class="scalehover text-white ms-3  bg-dark rounded fw-bold" id="clres">CLEAR</button>
+                    <label class="text-white ms-3  bg-dark rounded fw-bold">Average:</label>
+                    <div id="aver" class="scalehover text-white ms-3  bg-dark border border-primary rounded fw-bold"></div>
+                </div>
+                <div class="d-flex justify-content-center align-item-center">
+                    <div class="text-white d-flex justify-content-center align-item-center fs-4 fw-bold bg-success rounded col-3">
+                        <div >
+                            <label>SUBJECT</label>
+                        </div>
+                    </div>
+                    <div class="text-white d-flex justify-content-center align-item-center fs-4 fw-bold bg-success rounded ms-3 col-3">
+                        <div >
+                           <label>GRADE</label>
+                        </div>
+                    </div>
+                    <div class="text-white d-flex justify-content-center align-item-center fs-4 fw-bold bg-success rounded ms-3 col-3">
+                        <div >
+                           <label>RATE</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex fw-bold justify-content-center align-item-center p-3">
+                    <div class="d-flex justify-content-center align-item-center border border-primary col-3 rounded" >
+                        <div id="sub1"></div>
+                    </div>
+                    <div class="d-flex justify-content-center align-item-center border border-primary ms-4 col-3 rounded">
+                        <div id="grad"></div>
+                    </div>
+                    <div class="d-flex justify-content-center align-item-center border border-primary ms-4 col-3 rounded">
+                        <div id="rate"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
