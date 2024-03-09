@@ -5,6 +5,8 @@ $(document).on('submit','#grades',function(e){
     let s2 = $("#none").val();
     let k = "";
 
+  
+    
     if (s == s2 || g == k) {
         Swal.fire({
             icon: "error",
@@ -22,26 +24,10 @@ $(document).on('submit','#grades',function(e){
             text: "Invalid Grade!",
             footer: '<a href="https://www.google.com">Why do I have this issue?</a>'
           });
-        }else if(g>=98) {
-            $("#rate").append(`<div>With Highest Honor</div>`);
+        }else if(g>=75 ) {
+            $("#rate").append(`<div>Passed</div>`);
             $("#subj option:selected").addClass("d-none");
-            $("#subj").val(1);
-            
-        }else if(g>=95) {
-            $("#rate").append(`<div>Highest Honor</div>`);
-            $("#subj option:selected").addClass("d-none");
-            $("#subj").val(1);
-           
-        }else if(g>=90){
-            $("#rate").append(`<div>With Honor</div>`);
-            $("#subj option:selected").addClass("d-none");
-            $("#subj").val(1);
-           
-        }else if(g>=75) {
-            $("#rate").append(`<div>PASSED</div>`);
-            $("#subj option:selected").addClass("d-none");
-            $("#subj").val(1);
-               
+            $("#subj").val(1);           
         }else if(g<=74 && g>=65){
             $("#rate").append(`<div>Failed</div>`);
             $("#subj option:selected").addClass("d-none");
@@ -67,13 +53,33 @@ $(document).on('submit','#grades',function(e){
           
             calculateAverage();
         }
-    }
+        rate();
+      }
+        
+
     
 })
+
+function rate() {
+  let x = $("#aver").text();
+
+  if (x >=98 && x <= 100 ){
+    $("#pass").html(`<div>With Highest Honor</div>`)
+  }else if(x >=95) {
+    $("#pass").html(`<div>With High Honor</div>`)
+  }else if(x >= 90){
+    $("#pass").html(`<div>With Honor</div>`)
+  }else if (x >=75){
+    $("#pass").html(`<div>Passed</div>`)
+  }else {
+    $("#pass").html(`<div>Failed</div>`)
+  }
+}
 
 $(document).on('click','#addsub',function(){
   addSubs();
 })
+
 
 
 function addSubs() {
@@ -139,6 +145,7 @@ $(document).on('click','#clres',function(a) {
             $("#grad").html("");
             $("#rate").html("");
             $("#aver").html("");
+            $("#pass").html("");
           Swal.fire({
             title: "Cleared!",
             text: "Your file has been cleared.",
