@@ -26,7 +26,7 @@
                     <input class="col-12 fw-4 fw-bold p-2 rounded" placeholder="Add Subject Here" type="text" id="names">
                 </div>
                 <div class="col-3">
-                    <button class="col-12 scalehover fw-4  fw-bold text-white bg-dark p-2 rounded" id="addsub">ADD</button>
+                    <button class="fa col-12 scalehover fw-4  fw-bold text-white bg-dark p-2 rounded" id="addsub">ADD</button>
                 </div>
             </div><br>
         <div>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="col-6 d-flex p-2 justify-content-start align-item-start fs-4 fw-bold text-white">
                             <div class="col-5 bg-primary rounded d-flex justify-content-center align-item-center">
-                                <label class="col-12 d-flex justify-content-center align-item-center" for="grads">GRADE</label><br>
+                                <label class="col-12 d-flex justify-content-center align-item-center" for="grad">GRADE</label><br>
                             </div>
                         </div>
                     </div>
@@ -69,25 +69,27 @@
                 <div class="d-flex justify-content-center align-item-center p-3">
                     <label class="fa d-flex justify-content-center align-item-center bg-primary fw-bold p-2 fs-4 rounded col-4 text-white">RESULTS</label>
                 </div>
-                <div class="d-flex justify-content-center align-item-center mb-1">
+                <div class="d-flex justify-content-start align-item-start mb-1">
                     <div class="col-6 d-flex justify-content-end align-item-end">
                         <button class="col-4 me-2 scalehover text-white bg-dark rounded fw-bold" id="clres">CLEAR</button>
                     </div>
-                    <div class="col-6 d-flex justify-content-start align-item-start">
-                        <label class="col-4 ms-2 text-white d-flex justify-content-center align-item-center bg-dark rounded fw-bold">Average:</label>
+                    <div class="col-2 d-flex justify-content-start align-item-start">
+                        <label class="col-12 text-white d-flex justify-content-center align-item-center bg-dark rounded fw-bold">Average:</label>
                     </div>
-                    <div id="aver" class="bg-white scalehover text-primary fs-5 ms-3 rounded fw-bold"></div>
+                    <div class="d-flex justify-content-start align-item-start bg-white">
+                        <div id="aver" class="col-6 bg-white scalehover text-primary fs-5 ms-3 rounded fw-bold"></div>
+                    </div>
                 </div>
                 <div class="col-12">
                     <div class="d-flex justify-content-center align-item-center p-1">
-                        <div class="d-flex justify-content-center align-item-center bg-white fw-bold fs-5 rounded col-8 " id="pass"></div>
+                        <div class="d-flex justify-content-center align-item-center bg-white fw-bold fs-5 rounded col-4 " id="pass"></div>
                     </div>
                     <table class="table">
                         <thead>
                           <tr class="fs-5 bg-info rounded">
-                            <th scope="col">Subject</th>
-                            <th scope="col">Grade</th>
-                            <th scope="col">rate</th>
+                            <th scope="sub1">Subject</th>
+                            <th scope="grad">Grade</th>
+                            <th scope="rate">Rate</th>
                           </tr>
                         </thead>
                         <tbody>
