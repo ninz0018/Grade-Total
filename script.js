@@ -80,9 +80,11 @@ $(document).on('click','#addsub',function(){
   let p = $("#names").val();
   if (p != 0){
     addSubs();
+    $("#names").val("");
   }else {
     Swal.fire("Add Subject Failed!!");
   }
+  
 })
 
 function addSubs() {
@@ -97,7 +99,7 @@ function addSubs() {
     confirmButtonText: "Yes, Add it!"
   }).then((result) => {
     if (result.isConfirmed) {
-      $("#subj").append(`<option>`+ g + `</option>`)
+      $("#subj").append(`<option>`+ g + `</option>`)     
       Swal.fire({
         title: "Added!",
         text: "Your file has been Added.",
