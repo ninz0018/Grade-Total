@@ -25,11 +25,11 @@ $(document).on('submit','#grades',function(e){
             footer: '<a href="https://www.google.com">Why do I have this issue?</a>'
           });
         }else if(g>=75 ) {
-            $("#rate").append(`<div>Passed</div>`);
+            $("#rate").append(`<div style="color: green">Passed</div>`);
             $("#subj option:selected").addClass("d-none");
             $("#subj").val(1);           
         }else if(g<=74 && g>=65){
-            $("#rate").append(`<div>Failed</div>`);
+            $("#rate").append(`<div style="color: red;">Failed</div>`);
             $("#subj option:selected").addClass("d-none");
             $("#subj").val(1);
 
@@ -64,15 +64,15 @@ function rate() {
   let x = $("#aver").text();
 
   if (x >=98 && x <= 100 ){
-    $("#pass").html(`<div>With Highest Honor</div>`)
+    $("#pass").html(`<div style="color: green">With Highest Honor</div>`)
   }else if(x >=95) {
-    $("#pass").html(`<div>With High Honor</div>`)
+    $("#pass").html(`<div style="color: green">With High Honor</div>`)
   }else if(x >= 90){
-    $("#pass").html(`<div>With Honor</div>`)
+    $("#pass").html(`<div style="color: green">With Honor</div>`)
   }else if (x >=75){
-    $("#pass").html(`<div>Passed</div>`)
+    $("#pass").html(`<div style="color: green">Passed</div>`)
   }else {
-    $("#pass").html(`<div>Failed</div>`)
+    $("#pass").html(`<div style="color: red;">Failed</div>`)
   }
 }
 
