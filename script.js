@@ -77,17 +77,37 @@ function rate() {
 }
 
 $(document).on('click','#addsub',function(){
-  addSubs();
+  let p = $("#names").val();
+  if (p != 0){
+    addSubs();
+  }else {
+    Swal.fire("Add Subject Failed!!");
+  }
 })
-
-
 
 function addSubs() {
   let g = $("#names").val();
-  $("#subj").append(`<option>`+ g + `</option>`)
+  Swal.fire({
+    title: "Adding Subject",
+    text: "Click ok to confirm",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, Add it!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      $("#subj").append(`<option>`+ g + `</option>`)
+      Swal.fire({
+        title: "Added!",
+        text: "Your file has been Added.",
+        icon: "success"
+      });
+    }
+  });
 }
 
-function calculateAverage() {
+  function calculateAverage() {
     let total = 0;
     let count = 0;
     $('.ent').each(function() {
